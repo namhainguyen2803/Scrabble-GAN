@@ -43,6 +43,7 @@ for i,path in enumerate(paths):
         for j, line in tqdm.tqdm(enumerate(f1.readlines()), total=len(f1.readlines())):
             if (i==0 and j==0):
                 with open(txt_file, 'w', encoding='utf-8') as f2:
+                    print(line)
                     img_name, label = line.split()
                     f2.write(f"{img_name} ok {line}")
             else:
