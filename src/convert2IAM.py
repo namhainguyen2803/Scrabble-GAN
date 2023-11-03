@@ -37,7 +37,7 @@ txt_file = os.path.join(args.out_dir, "words.txt")
 if not os.path.exists(save_img_dir):
     os.makedirs(save_img_dir)
 
-paths = [args.train_list, args.val_list]
+paths = [args.train_lst, args.val_lst]
 for i,path in enumerate(paths):
     with open(path, 'r', encoding='utf-8') as f1:
         for j, line in tqdm.tqdm(enumerate(f1.readlines()), total=len(f1.readlines())):
