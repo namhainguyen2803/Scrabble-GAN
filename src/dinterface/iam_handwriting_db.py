@@ -46,7 +46,6 @@ def convert_to_gan_reading_format_save(input_dir, output_dir, target_size, bucke
         for line in fi:
             if not line.startswith('#'):
                 labels = line.split()
-                print(labels)
                 labels = [labels[0], labels[1], " ".join(labels[2:])]
                 file_nm = labels[0]
 
