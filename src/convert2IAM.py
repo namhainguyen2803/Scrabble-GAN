@@ -7,13 +7,13 @@ def get_parse():
     args = argparse.ArgumentParser()
     args.add_argument(
         "-tl",
-        "--train-list",
+        "--train-lst",
         help="Train text list path",
         required=True
     )
     args.add_argument(
         "-vl",
-        "--val-list",
+        "--val-lst",
         help="Valid text list path",
         required=True
     )
