@@ -39,12 +39,14 @@ def convert_to_gan_reading_format_save(input_dir, output_dir, target_size, bucke
 
     # (2)get file transcriptions (stored in words.txt)
     transcription_file = input_dir.rstrip('/') + '.txt'
+    print(f"transcription_file: {transcription_file}")
     transcriptions = {}
 
     with open(transcription_file, 'r', encoding="utf8") as fi:
         for line in fi:
             if not line.startswith('#'):
                 labels = line.split()
+                print(labels)
                 file_nm = labels[0]
 
                 # mark not properly segmented words as '-1'

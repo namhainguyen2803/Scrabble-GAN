@@ -44,11 +44,11 @@ for i,path in enumerate(paths):
             if (i==0 and j==0):
                 with open(txt_file, 'w', encoding='utf-8') as f2:
                     img_name, label = line.split(' ', 1)
-                    f2.write(f"{img_name} ok {line}")
+                    f2.write(f"{img_name} ok {label}")
             else:
                 with open(txt_file, 'a', encoding='utf-8') as f2:
                     img_name, label = line.split(' ', 1)
-                    f2.write(f"\n{img_name} ok {line}")
+                    f2.write(f"\n{img_name} ok {label}")
                     
 for img_name in tqdm.tqdm(os.listdir(args.images)):
     try:
